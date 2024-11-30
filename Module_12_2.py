@@ -1,7 +1,3 @@
-
-
-
-
 import unittest
 import runner_and_tournament
 
@@ -19,6 +15,7 @@ class TournamentTest(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         for result in cls.all_results.values():
+
             print(result)
 
     def test_race_usain_nik(self):
