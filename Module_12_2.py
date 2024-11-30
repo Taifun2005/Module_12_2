@@ -14,9 +14,9 @@ class TournamentTest(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        for result in cls.all_results.values():
-
-            print(result)
+        for i, (key, result) in enumerate(cls.all_results.items()):
+            results_str = ', '.join([str(participant) for participant in result.values()])
+            print(f'{i + 1}. {results_str}')
 
     def test_race_usain_nik(self):
         tournament = runner_and_tournament.Tournament(90, self.Usain, self.Nik)
